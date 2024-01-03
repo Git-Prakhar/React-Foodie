@@ -1,0 +1,917 @@
+:root{
+    --red: #FF6B6B;
+    --yelWhite: #F7FFF7;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.lpSection{
+    height: 100vh;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+#lpSection1{
+    border-top:none;
+}
+
+.lpGrayscale{
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.48;
+    width: 100%;
+    height: 100%;
+}
+
+#lpCarousel{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.lpCaroImg{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+#lpSection1Con{
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:16.875rem;
+}
+
+#lpNavbar{
+    position: relative;
+    top:2.188rem;
+    height: 5.438rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40rem;
+}
+
+#lpLogo{
+    font-size: 3.313rem;
+    font-weight: 700;
+    color: var(--red);
+}
+
+#lpLogo span{
+    color:white;
+}
+
+#lpNavBtns a{
+    font-size: 1.875rem;
+    color:white;
+    transition: 0.3s ease-out;
+}
+
+#lpNavBtns .lpNavBtnLi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#lpNavBtns .lpNavBtnLi::after{
+    content: '';
+    width: 50px;
+    border-radius: 5px;
+    height: 5px;
+    background-color: var(--red);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s linear 0.1s;
+}
+
+#lpNavBtns .lpNavBtnLi::before{
+    content: '';
+    width: 3.125rem;
+    border-radius: 5px;
+    height: 0.313rem;
+    background-color: var(--red);
+    opacity: 0;
+    transform: translateY(0.625rem);
+    transition: opacity 0.3s, transform 0.3s linear 0.1s;
+}
+
+#lpNavBtns .lpNavBtnLi:hover::after{
+    opacity: 1;
+    transform: translateX(1.25rem) translateY(0px);
+}
+
+#lpNavBtns .lpNavBtnLi:hover::before{
+    opacity: 1;
+    transform: translateX(-1.25rem) translateY(0px);
+}
+
+#lpSearchImg{
+    width: 1.501rem;
+    height: 2.114rem;
+    background: none;
+    border:none;
+    background-image: url('../images/searchIcon.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#lpNavBtns ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap:1.563rem;
+}
+
+#lpHead{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.75rem;
+}
+
+#lpTitle{
+    font-size: 6.625rem;
+    line-height: 2.313rem;
+    font-weight: 700;
+    color:var(--red);
+}
+
+#lpTitle span:first-child{
+    color:white;
+}
+
+#lpTitle span:last-child{
+    font-size: 1.938rem;
+    color:white;
+    font-weight: 400;
+}
+
+#lpOrderButton{
+    width: 13.813rem;
+    height: 4.25rem;
+    border:5px solid var(--red);
+    border-radius:10px;
+    font-size: 2.188rem;
+    color:white;
+    font-weight:700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-out;
+}
+
+#lpOrderButton:hover{
+    background-color: var(--red);
+    box-shadow: 7px 7px 0px #a23e3e;
+    transform: translateX(-7px) translateY(-7px);
+}
+
+#lpSection2{
+    background-color: var(--yelWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:51px;
+    position: relative;
+    z-index: 2;
+}
+
+#lpS2BG{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/blueberry.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    transform: scale(0.9);
+}
+
+#lpSection2Title{
+    position: relative;
+    z-index: 2;
+    font-size: 3.063rem;
+    line-height: 2.313rem;
+    text-align: center;
+    color:var(--red);
+    font-weight: 700;
+}
+
+#lpSection2Title span{
+    font-size: 1.563rem;
+    font-weight: 400;
+}
+
+#lpStarHolder{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.75rem;
+}
+
+.lpStar{
+    width: 3.125rem;
+    height: 3.125rem;
+    transform: scale(0.8);
+    background-image: url('../images/Star.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: starAnim;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes starAnim{
+    from{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(0.8);
+    }
+}
+
+#lpS2CardHolder{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.063rem;
+}
+
+.lpS2Card{
+    width: 24rem;
+    height: 28.438rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    border-radius:1.438rem;
+    color:white;
+    text-align: center;
+    transition: 0.3s;
+    /* backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px); */
+}
+
+.lpS2CardHead{
+    font-size: 3.125rem;
+    font-weight: 600;
+}
+
+.lpS2CardCon{
+    font-size: 1.875rem;
+    font-weight: 400;
+    width: 21.688rem;
+}
+
+#lpSection3{
+    background-color: #1A535C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+}
+
+#lpS3Title{
+    position: relative;
+    z-index: 2;
+    font-size: 5.188rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 3.125rem;
+    font-weight: 700;
+    color:white;
+}
+
+#lpS3Title span{
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+#lpS3Menu{
+    position: relative;
+    z-index: 2;
+    width: 15.438rem;
+    height: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:7.188rem;
+}
+
+.lpS3MenuItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0.625rem;
+    transition: 0.3s;
+}
+
+.lpS3MenuItem:hover{
+    box-shadow: 0px 0px 10px 5px white;
+}
+
+.lpS3MenuText{
+    font-size: 3.063rem;
+    font-weight: 400;
+    color:white;
+    width: 12.813rem;
+    text-align: center;
+}
+
+#lpS3FullMenu{
+    position: relative;
+    z-index: 2;
+    width: 17.313rem;
+    height: 5.188rem;
+    font-size: 2.313rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:5px solid var(--red);
+    border-radius: 9px;
+    color:white;
+    transition: 0.3s;
+}
+
+#lpS3FullMenu:hover{
+    background-color: var(--red);
+    box-shadow: 7px 7px 0px #a23e3e;
+    transform: translateX(-7px) translateY(-7px);
+}
+
+#lpMealRawSVG{
+    width: 10.438rem;
+    height: 9.813rem;
+}
+
+#lpFastFoodRawSVG{
+    width:12.813rem;
+    height:8.188rem;
+}
+
+#lpDrinkRawSVG{
+    width:8.125rem;
+    height:10.375rem;
+}
+
+#lpDesertRawSVG{
+    width:11.625rem;
+    height:10.563rem;
+}
+
+#r26, #r25{
+    transition: 0.5s;
+    transform-origin: center;
+    animation-name: mealAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#lpFastFoodSVG{
+    animation: ffAnim 2s ease-in-out infinite;
+}
+
+#r19,#r20{
+    transform-origin: center;
+    animation: drinkAnim 2s ease-in-out infinite;
+}
+
+#l4{
+    transition: 0.5s;
+    transform-origin: center;
+    animation: desertAnim 2s ease-in-out infinite;
+}
+
+@keyframes mealAnim{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes ffAnim{
+    from{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(0.9);
+    }
+    to{
+        transform: scaleY(1);
+    }
+
+}
+
+@keyframes drinkAnim{
+    from{
+        rotate: 0deg;
+        transform: translateY(0px);
+    }
+    50%{
+        rotate: 10deg;
+        transform: translateY(-10px);
+    }
+    to{
+        rotate: 0deg;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes desertAnim{
+    from{
+        rotate : 0deg;
+    }
+    25%{
+        rotate : 5deg;
+    }
+    75%{
+        rotate : -5deg;
+    }
+    to{
+        rotate : 0deg;
+    }
+}
+
+.lpS3MenuImg{
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    transform: scale(0.9);
+    transition: 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#lpMealImg{
+    background-image: url('../images/aluparatha.jpg');
+}
+#lpFastFoodImg{
+    background-image: url('../images/burger.jpg');
+}
+#lpDrinkImg{
+    background-image: url('../images/drink.jpg');
+}
+#lpDesertImg{
+    background-image: url('../images/desert1.jpg');
+}
+
+#lpSection4{
+    background-color: var(--yelWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1.375rem;
+}
+
+#lpS4Title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:var(--red);
+    font-size: 3.063rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+#lpS4Title span{
+    font-weight: 400;
+    font-size: 1.563rem;
+}
+
+#lpS4ReviewHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.75rem;
+}
+
+.lpS4Review{
+    width: 43.125rem;
+    height: 8.875rem;
+    border:5px solid black;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4.75rem;
+}
+
+.lpS4ReviewCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:0.375rem;
+    width: 32.688rem;
+}
+
+.lpS4ReviewTop{
+    display: flex;
+    align-items: center;
+    gap:0.625rem;
+}
+
+.lpS4ReviewImg{
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    background-size: 100px 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.lpS4ReviewHead{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.625rem;
+}
+
+.lpS4ReviewUsername{
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.lpS4ReviewDay{
+    font-size: 0.875rem;
+    font-weight: 700;
+    color:#999999;
+}
+
+.lpS4ReviewBot{
+    color: #494949;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.lpS4ReviewHeart{
+    width: 3rem;
+    height: 3rem;
+    background-image: url('../images/icons8-heart-48.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#lpS4ReviewInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.563rem;
+    width: 43.125rem;
+}
+
+#lpS4ReviewUsernameInp{
+    width: 100%;
+    height: 3.5rem;
+}
+
+.lpWrongInp{
+    animation:wrongAnim 0.3s forwards;
+}
+
+@keyframes wrongAnim{
+    from{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-10px);
+    }
+    75%{
+        transform: translateX(10px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+#lpS4ReviewMessageInp{
+    width: 100%;
+    height: 10.5rem;
+    resize: none;
+}
+
+#lpS4ReviewMessageInp, #lpS4ReviewUsernameInp{
+    padding:0.625rem;
+}
+
+#lpS4ReviewOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2.063rem;
+}
+
+#lpS4ReviewIBtn{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 7px 0px #0081A7;
+    cursor: default;
+}
+
+#lpS4ReviewImgInp{
+    width: 15.625rem;
+    height: 3.375rem;
+    box-shadow: 7px 7px 0px #0081A7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#lpS4ReviewPost{
+    width: 10.625rem;
+    height: 3.375rem;
+    box-shadow: 7px 7px 0px #0081A7;
+}
+
+#lpS4ReviewMessageCount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.5rem;
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+#lpS4ReviewUsernameInp, #lpS4ReviewMessageInp, #lpS4ReviewIBtn, #lpS4ReviewImgInp, #lpS4ReviewPost{
+    background-color: #4ECDC4;
+    border:4px solid black;
+    border-radius: 17px;
+    font-size: 1.875rem;
+    font-weight: 600;
+    color:white;
+}
+
+#lpS4CustomReview{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1s;
+}
+
+.lphidden{
+    display: none;
+}
+
+.lpLiked{
+    animation: likeAnim 300ms forwards;
+}
+
+@keyframes likeAnim{
+    from{
+        background-image: url('../images/icons8-heart-48.png');
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.9);
+    }
+    75%{
+        background-image: url('../images/icons8-heart-48\ \(1\).png');
+        transform: scale(1.1);
+    }
+    to{
+        background-image: url('../images/icons8-heart-48\ \(1\).png');
+        transform: scale(1);
+    }
+}
+
+#lpSection5{
+    background-color: #0C272B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    gap:4.25rem;
+}
+
+#lpS5Title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.063rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+#lpS5Title span{
+    font-size: 1.563rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+#lpS5Main{
+    display: flex;
+    justify-content: center;
+    gap:2.625rem;
+}
+
+#lpS5CardHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1.125rem;
+}
+
+#lpS5CardHolder a{
+    color:white;
+}
+
+.lpS5Card{
+    position: relative;
+    width: 20.938rem;
+    height: 7.063rem;
+    border: 3px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.25rem;
+    line-height: 1.875rem;
+    overflow: hidden;
+}
+
+.lpS5Card::after{
+    content: '';
+    position: absolute;
+    width: 20.938rem;
+    height: 7.063rem;
+    left:-25rem;
+    z-index: 1;
+    transition: 0.5s ease-out;
+}
+
+#lpS5Insta::after{
+    background: linear-gradient(90deg, #3051f1 10%, #c92bb7 70%);
+}
+
+#lpS5Twitter::after{
+    background-color: black;
+}
+
+#lpS5Youtube::after{
+    background-color: #ff0000;
+}
+
+.lpS5Card:hover:after{
+    left:0px;
+}
+/* 
+#lpS5Twitter:hover:after{
+    left:0px;
+} */
+
+.lpS5CardHead{
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.lpS5CardCon{
+    position: relative;
+    z-index: 2;
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+#lpS5Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1.125rem;
+}
+
+.lpS5InpDiv{
+    position: relative;
+}
+
+.lpS5Label{
+    position: absolute;
+    color:black;
+    font-weight: 500;
+    font-size: 1.875rem;
+    background-color: #0C272B;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    color:white;
+    top:15px;
+    left:15px;
+    transition: 0.3s;
+}
+
+.lpS5InpField{
+    width: 27rem;
+    height: 4.688rem;
+    background-color: #0C272B;
+    border:3px solid white;
+    border-radius: 20px;
+    font-size: 1.875rem;
+    color:var(--red);
+    padding:0.625rem;
+}
+
+#lpS5FormMessage{
+    height: 15.313rem;
+    resize: none;
+}
+
+#lpS5Submit{
+    width: 15.563rem;
+    height: 4.625rem;
+    background-color: white;
+    border:none;
+    border-radius:20px;
+    box-shadow: 8px 8px 0px var(--red);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color:var(--red);
+}
+
+@media only screen and (max-width:3000px){
+    html{
+        font-size: 24.24px;
+    }
+}
+
+@media only screen and (max-width:2072px){
+    html{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width:1884px){
+    html{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:1365px){
+    html{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:1201px){
+    html{
+        font-size: 10px;
+    }
+}
