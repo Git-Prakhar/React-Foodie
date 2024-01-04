@@ -10,8 +10,8 @@ a{
 
 .lpSection{
     height: 100vh;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    border-top: 0.313rem solid white;
+    border-bottom: 0.313rem solid white;
 }
 
 #lpSection1{
@@ -91,19 +91,19 @@ a{
 
 #lpNavBtns .lpNavBtnLi::after{
     content: '';
-    width: 50px;
-    border-radius: 5px;
-    height: 5px;
+    width: 3.125rem;
+    border-radius: 0.313rem;
+    height: 0.313rem;
     background-color: var(--red);
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem);
     transition: 0.3s;
 }
 
 #lpNavBtns .lpNavBtnLi::before{
     content: '';
     width: 3.125rem;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     height: 0.313rem;
     background-color: var(--red);
     opacity: 0;
@@ -113,12 +113,12 @@ a{
 
 #lpNavBtns .lpNavBtnLi:hover::after{
     opacity: 1;
-    transform: translateX(1.25rem) translateY(-5px);
+    transform: translateX(1.25rem) translateY(-0.313rem);
 }
 
 #lpNavBtns .lpNavBtnLi:hover::before{
     opacity: 1;
-    transform: translateX(-1.25rem) translateY(+5px);
+    transform: translateX(-1.25rem) translateY(+0.313rem);
 }
 
 #lpSearchImg{
@@ -170,8 +170,8 @@ a{
 #lpOrderButton{
     width: 13.813rem;
     height: 4.25rem;
-    border:5px solid var(--red);
-    border-radius:10px;
+    border:0.313rem solid var(--red);
+    border-radius:0.625rem;
     font-size: 2.188rem;
     color:white;
     font-weight:700;
@@ -345,7 +345,7 @@ a{
 }
 
 .lpS3MenuItem:hover{
-    box-shadow: 0px 0px 10px 5px white;
+    box-shadow: 0px 0px 0.625rem 0.313rem white;
 }
 
 .lpS3MenuText{
@@ -366,7 +366,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    border:5px solid var(--red);
+    border:0.313rem solid var(--red);
     border-radius: 9px;
     color:white;
     transition: 0.3s;
@@ -427,7 +427,7 @@ a{
         transform: translateY(0);
     }
     50%{
-        transform: translateY(10px);
+        transform: translateY(0.625rem);
     }
     to{
         transform: translateY(0);
@@ -454,7 +454,7 @@ a{
     }
     50%{
         rotate: 10deg;
-        transform: translateY(-10px);
+        transform: translateY(-0.625rem);
     }
     to{
         rotate: 0deg;
@@ -540,7 +540,7 @@ a{
 .lpS4Review{
     width: 43.125rem;
     height: 8.875rem;
-    border:5px solid black;
+    border:0.313rem solid black;
     border-radius: 16px;
     display: flex;
     justify-content: center;
@@ -628,10 +628,10 @@ a{
         transform: translateX(0);
     }
     25%{
-        transform: translateX(-10px);
+        transform: translateX(-0.625rem);
     }
     75%{
-        transform: translateX(10px);
+        transform: translateX(0.625rem);
     }
     to{
         transform: translateX(0px);
@@ -692,8 +692,8 @@ a{
 
 #lpS4ReviewUsernameInp, #lpS4ReviewMessageInp, #lpS4ReviewIBtn, #lpS4ReviewImgInp, #lpS4ReviewPost{
     background-color: #4ECDC4;
-    border:4px solid black;
-    border-radius: 17px;
+    border:0.25rem solid black;
+    border-radius: 1.063rem;
     font-size: 1.875rem;
     font-weight: 600;
     color:white;
@@ -778,8 +778,8 @@ a{
     position: relative;
     width: 20.938rem;
     height: 7.063rem;
-    border: 3px solid white;
-    border-radius: 20px;
+    border: 0.188rem solid white;
+    border-radius: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -853,8 +853,8 @@ a{
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     color:white;
-    top:15px;
-    left:15px;
+    top:0.938rem;
+    left:0.938rem;
     transition: 0.3s;
 }
 
@@ -862,8 +862,8 @@ a{
     width: 27rem;
     height: 4.688rem;
     background-color: #0C272B;
-    border:3px solid white;
-    border-radius: 20px;
+    border:0.188rem solid white;
+    border-radius: 1.25rem;
     font-size: 1.875rem;
     color:var(--red);
     padding:0.625rem;
@@ -879,8 +879,8 @@ a{
     height: 4.625rem;
     background-color: white;
     border:none;
-    border-radius:20px;
-    box-shadow: 8px 8px 0px var(--red);
+    border-radius:1.25rem;
+    box-shadow: 0.5rem 0.5rem 0px var(--red);
     font-size: 2.5rem;
     font-weight: 700;
     color:var(--red);
@@ -920,16 +920,106 @@ a{
     html{
         font-size: 14px;
     }
-    /* #lpNavBtns{
-        display: none;
+    #lpSection1{
+        height: 100vh;
     }
-    #lpSection2{
-        height: 1700px;
+    #lpCarousel{
+        height: 80rem;
+    }
+    .lpGrayscale{
+        height: 80rem;
+    }
+    #lpNavBtns{
+        display: none;
     }
     #lpS2CardHolder{
         flex-direction: column;
     }
-    #lpS2BG{
-        background-size: contain;
-    } */
+    #lpSection2{
+        height: 120rem;
+    }
+    #lpSection3{
+        height: 120rem;
+        position: relative;
+    }
+    #lpSection3 .lpGrayscale{
+        height: 120rem;
+    }
+    #lpS3Menu{
+        flex-direction: column;height: fit-content;
+    }
+    #lpS5Main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #lpSection5{
+        height: 80rem;
+    }
+    .lpS5Card{
+        width: 39rem;
+    }
+    .lpS5InpField{
+        width: 39rem;
+    }
+    .lpS3MenuImg{
+        opacity: 1;
+        height: 32.5rem;
+        width: 110%;
+        top:-1.3rem;
+    }
+    #lpFastFoodImg{
+        top:28.7rem;
+    }
+    #lpDrinkImg{
+        top:58.4rem;
+    }
+    #lpDesertImg{
+        top:88.1rem;
+    }
+    #lpS3Menu a{
+        pointer-events:none;
+    }
+}
+
+@media only screen and (max-width:605px){
+    html{
+        font-size: 12px;
+    }
+    #lpSection1{
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-width:426px){
+    html{
+        font-size: 9px;
+    }
+    #lpS3Menu{
+        flex-direction: column;
+        height: fit-content;
+        gap:5rem;
+    }
+    #lpSection3{
+        gap:5rem;
+    }
+    #lpSection4{
+        height: 60rem;
+    }
+}
+
+@media only screen and (max-width:376px){
+    html{
+        font-size: 7px;
+    }
+    #lpSection1{
+        height: 80rem;
+        
+    }
+    #lpSection1Con{
+        gap:25rem;
+    }
+    #lpSection2{
+        gap:3rem;
+    }
 }

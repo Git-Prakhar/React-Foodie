@@ -8,6 +8,7 @@ import blueberry from '../images/blueberry.jpg'
 import delivery from '../images/delivery_2000p.jpg'
 import payment from '../images/payment.jpg'
 import { Tooltip } from 'react-tooltip'
+import { Link } from 'react-scroll'
 
 export default function LandingPage() {
     let isHovering = false;
@@ -323,11 +324,11 @@ export default function LandingPage() {
                         <div id="lpNavBtns">
                             <ul>
                                 <li><button type='button' id='lpSearchImg'></button></li>
-                                <li className='lpNavBtnLi'><a href="/" id='lpNavBtn'>Home</a></li>
-                                <li className='lpNavBtnLi'><a href="#lpSection2" id='lpNavBtn'>About</a></li>
-                                <li className='lpNavBtnLi'><a href="#lpSection3" id='lpNavBtn'>Menu</a></li>
-                                <li className='lpNavBtnLi'><a href="#lpSection4" id='lpNavBtn'>Review</a></li>
-                                <li className='lpNavBtnLi'><a href="#lpSection5" id='lpNavBtn'>Contact</a></li>
+                                <li className='lpNavBtnLi'><a href="lpSection1" id='lpNavBtn'>Home</a></li>
+                                <li className='lpNavBtnLi'><Link to='lpSection2' spy={true} duration={500}>About</Link></li>
+                                <li className='lpNavBtnLi'><Link to='lpSection3' spy={true} duration={500}>Menu</Link></li>
+                                <li className='lpNavBtnLi'><Link to='lpSection4' spy={true} duration={500}>Review</Link></li>
+                                <li className='lpNavBtnLi'><Link to='lpSection5' spy={true} duration={500}>Contact</Link></li>
                             </ul>
                         </div>
                     </div>
