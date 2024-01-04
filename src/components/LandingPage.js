@@ -10,15 +10,12 @@ import payment from '../images/payment.jpg'
 import { Tooltip } from 'react-tooltip'
 
 export default function LandingPage() {
-    let isMoving = false;
     let isHovering = false;
     useEffect(() => {
         startSection2();
         startCarousel();
     })
     function startCarousel() {
-        if (isMoving === true) return;
-        isMoving = true;
         let n = 0;
         let imgs = document.querySelectorAll('.lpCaroImg');
         let fontSize = parseFloat(window.getComputedStyle(document.querySelector('html'), null).getPropertyValue('font-size'));
@@ -58,7 +55,6 @@ export default function LandingPage() {
         }, 5000);
     }
     function startSection2() {
-        if (isMoving === true) return;
         let count = 2;
         let imgArr = [blueberry, delivery, payment];
         let section = document.querySelector('#lpS2BG');
@@ -328,10 +324,10 @@ export default function LandingPage() {
                             <ul>
                                 <li><button type='button' id='lpSearchImg'></button></li>
                                 <li className='lpNavBtnLi'><a href="/" id='lpNavBtn'>Home</a></li>
-                                <li className='lpNavBtnLi'><a href="/" id='lpNavBtn'>About</a></li>
-                                <li className='lpNavBtnLi'><a href="/" id='lpNavBtn'>Menu</a></li>
-                                <li className='lpNavBtnLi'><a href="/" id='lpNavBtn'>Review</a></li>
-                                <li className='lpNavBtnLi'><a href="/" id='lpNavBtn'>Contact</a></li>
+                                <li className='lpNavBtnLi'><a href="#lpSection2" id='lpNavBtn'>About</a></li>
+                                <li className='lpNavBtnLi'><a href="#lpSection3" id='lpNavBtn'>Menu</a></li>
+                                <li className='lpNavBtnLi'><a href="#lpSection4" id='lpNavBtn'>Review</a></li>
+                                <li className='lpNavBtnLi'><a href="#lpSection5" id='lpNavBtn'>Contact</a></li>
                             </ul>
                         </div>
                     </div>

@@ -97,7 +97,7 @@ a{
     background-color: var(--red);
     opacity: 0;
     transform: translateY(-10px);
-    transition: opacity 0.3s, transform 0.3s linear 0.1s;
+    transition: 0.3s;
 }
 
 #lpNavBtns .lpNavBtnLi::before{
@@ -108,17 +108,17 @@ a{
     background-color: var(--red);
     opacity: 0;
     transform: translateY(0.625rem);
-    transition: opacity 0.3s, transform 0.3s linear 0.1s;
+    transition: 0.3s;
 }
 
 #lpNavBtns .lpNavBtnLi:hover::after{
     opacity: 1;
-    transform: translateX(1.25rem) translateY(0px);
+    transform: translateX(1.25rem) translateY(-5px);
 }
 
 #lpNavBtns .lpNavBtnLi:hover::before{
     opacity: 1;
-    transform: translateX(-1.25rem) translateY(0px);
+    transform: translateX(-1.25rem) translateY(+5px);
 }
 
 #lpSearchImg{
@@ -914,4 +914,22 @@ a{
     html{
         font-size: 10px;
     }
+}
+
+@media only screen and (max-width:860px){
+    html{
+        font-size: 14px;
+    }
+    /* #lpNavBtns{
+        display: none;
+    }
+    #lpSection2{
+        height: 1700px;
+    }
+    #lpS2CardHolder{
+        flex-direction: column;
+    }
+    #lpS2BG{
+        background-size: contain;
+    } */
 }
