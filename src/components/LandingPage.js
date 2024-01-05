@@ -12,6 +12,8 @@ import { Link } from 'react-scroll'
 
 export default function LandingPage() {
     let isHovering = false;
+    const phoneScreen = window.matchMedia('(max-width:860px)');
+    console.log(phoneScreen.matches);
     useEffect(() => {
         startSection2();
         startCarousel();
@@ -209,6 +211,7 @@ export default function LandingPage() {
         }
     }
     function showMenu(code) {
+        if(phoneScreen.matches) return;
         let imgs = document.querySelectorAll('.lpS3MenuImg');
         imgs.forEach(ele => {
             ele.style.opacity = 0;

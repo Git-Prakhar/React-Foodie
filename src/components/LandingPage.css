@@ -792,9 +792,9 @@ a{
 .lpS5Card::after{
     content: '';
     position: absolute;
-    width: 20.938rem;
+    width: 100%;
     height: 7.063rem;
-    left:-25rem;
+    left:-100%;
     z-index: 1;
     transition: 0.5s ease-out;
 }
@@ -811,7 +811,7 @@ a{
     background-color: #ff0000;
 }
 
-.lpS5Card:hover:after{
+.lpS5Card:hover::after{
     left:0px;
 }
 /* 
@@ -925,10 +925,10 @@ a{
         height: 100vh;
     }
     #lpCarousel{
-        height: 80rem;
+        height: 100%;
     }
     .lpGrayscale{
-        height: 80rem;
+        height: 100%;
     }
     #lpNavBtns{
         display: none;
@@ -978,9 +978,6 @@ a{
     #lpDesertImg{
         top:88.1rem;
     }
-    #lpS3Menu a{
-        pointer-events:none;
-    }
 }
 
 @media only screen and (max-width:605px){
@@ -992,7 +989,7 @@ a{
     }
 }
 
-@media only screen and (max-width:426px){
+@media only screen and (max-width:535px){
     html{
         font-size: 9px;
     }
@@ -1009,13 +1006,18 @@ a{
     }
 }
 
-@media only screen and (max-width:376px){
+@media only screen and (max-width:400px){
     html{
         font-size: 7px;
     }
     #lpSection1{
         height: 80rem;
-        
+    }
+    #lpCarousel{
+        height: 80rem;
+    }
+    .lpGrayscale{
+        height: 80rem;
     }
     #lpSection1Con{
         gap:25rem;
