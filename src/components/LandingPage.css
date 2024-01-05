@@ -49,6 +49,7 @@ a{
 #lpSection1Con{
     position: relative;
     z-index: 3;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +58,7 @@ a{
 }
 
 #lpNavbar{
-    position: relative;
+    position: absolute;
     top:2.188rem;
     height: 5.438rem;
     display: flex;
