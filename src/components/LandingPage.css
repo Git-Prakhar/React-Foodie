@@ -122,17 +122,6 @@ a{
     transform: translateX(-1.25rem) translateY(+0.313rem);
 }
 
-#lpSearchImg{
-    width: 1.501rem;
-    height: 2.114rem;
-    background: none;
-    border:none;
-    background-image: url('../images/searchIcon.svg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 #lpNavBtns ul{
     display: flex;
     justify-content: center;

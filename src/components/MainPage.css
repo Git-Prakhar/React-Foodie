@@ -1,0 +1,175 @@
+#mainPage{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fpMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color:white;
+    margin-top: 265px;
+    height: 1900px;
+    width:80%;
+    gap: 250px;
+}
+
+#fpSection1{
+    width: 100%;
+}
+
+#fpS1CardHolder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fpS1Card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.fpS1CardImg{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius:50%;
+    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.51);
+}
+
+.fpS1CardText{
+    font-size: 45px;
+    font-weight: 500;
+}
+
+#fpSection2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:150px;
+}
+
+.fpS2Sections{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.fpS2Title{
+    width: 100%;
+    text-align: left;
+    font-size: 45px;
+}
+
+.fpS2CardHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:75px;
+}
+
+.fpS2Card{
+    padding: 10px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 394px;
+    width: 400px;
+    gap:10px;
+    transition: 0.3s;
+}
+
+.fpS2Card:hover{
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.51);
+}
+
+.fpS2dishSelected {
+    animation : FoodSelect 0.3s forwards;
+}
+
+@keyframes FoodSelect{
+    from {
+        scale: 1;
+    }
+    25%{
+        scale: 1.1;
+    }
+    75%{
+        scale: 0.9;
+        background-color: #00ff778c;
+    }
+    to{
+        scale: 1;
+        background-color: #00ff778c;
+    }
+}
+
+@keyframes FoodSelectRate {
+    from{
+    }
+    75%{
+        background-color: var(--blk);
+        color:white;
+    }
+    to{
+        background-color: var(--blk);
+        color:white;
+    }
+}
+
+.fpS2CardImg{
+    width: 100%;
+    height: 80%;
+    border-radius: 35px;
+}
+
+.fpS2CardBottom{
+    width: 100%;
+    display: flex;
+    padding: 0px 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fpS2CardLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fpS2CardDishName{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.fpS2CardDishPrice, .fpS2CardDishReview{
+    color: #D1D1D1;
+}
+
+.fpS2CardDishRate{
+    color:black;
+    background-color: #00FF75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    padding:1px 5px;
+    border-radius:5px;
+}
+
+.fpS2RateSelected{
+    animation: FoodSelectRate 0.3s forwards;
+}

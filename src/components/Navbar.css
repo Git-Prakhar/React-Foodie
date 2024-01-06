@@ -1,0 +1,133 @@
+:root{
+    --blk : #202020;
+}
+
+#mpNavbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    gap:750px;
+    position: relative;
+    top:2.5rem;
+}
+
+#mpNavbarTitle{
+    font-size: 3.125rem;
+    font-weight: 700;
+    color:var(--red);
+}
+
+#mpNavbarTitle span{
+    color:white;
+}
+
+#logoNlocation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+}
+
+#mpNavbarLocation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mpNavbarLocation img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#mpNavbarLocationText{
+    font-size: 0.938rem;
+    font-weight: 300;
+    width: 4.375rem;
+}
+
+#mpSearchBar{
+    position: fixed;
+    width: 100%;
+    top:2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.563rem;
+    z-index: 99;
+    
+}
+
+#searchBar{
+    padding: 0.625rem;
+    box-shadow: 0 0 0.331rem 0.188rem rgba(255, 255, 255, 0.71);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.25rem;
+    background-color: var(--blk);
+}
+
+#searchTextInp{
+    background-color: var(--blk);
+    border:none;
+    width: 21.875rem;
+    height: 2.188rem;
+    outline: none;
+    font-size: 1.563rem;
+    color:white;
+}
+
+#searchBarFilterHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.25rem;
+}
+
+.searchBarFilters{
+    font-size: 1.25rem;
+    padding: 0.625rem;
+    background-color: var(--blk);
+    border:none;
+    color:#FFCECE;
+    opacity: 0.71;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.331rem 0.188rem rgba(255, 255, 255, 0.71);
+}
+
+#mpLoginAndSignUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    gap:1.563rem;
+}
+
+.filterActive{
+    animation: filterAnim 0.3s forwards;
+}
+
+@keyframes filterAnim{
+    from{
+        scale: 1;
+        opacity: 1;
+    }
+    25%{
+        scale: 0.9;
+    }
+    75%{
+        scale: 1.1;
+        background-color: rgb(45, 255, 87);
+        color:black;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+        background-color: rgb(45, 255, 87);
+        color:black;
+    }
+}
